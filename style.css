@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Poppins:ital,wght@0,100;0,400;0,600;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,400;0,600;1,400;1,700&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+section,
+span,
+p{
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    border: none;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+/*Header Bolumu Giris*/
+
+.header{
+    background-image: url("imagescity/city2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.header-logo{
+    color: rgb(132, 165, 42);
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.header-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0px;
+}
+
+#menuItems :hover{
+    background-color: rgb(190, 185, 182);
+    transition: 0.5s;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+#menu-icon{
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: azure;
+    border-radius: 5px;
+}
+
+/*Menu Responsive giris*/
+    @media only screen and (max-width:800px){
+        
+        .header-menu ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            top: 100px;
+            left: 0;
+            background-color:chocolate;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+
+        }
+        .header-menu ul li{
+            margin-right: 50px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .header-menu ul li a{
+            color: white;
+    }
+
+        .header-menu #menu-icon {
+            display: block;
+            cursor: pointer;
+        }
+    }
+
+
+.text-header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.welcome{
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 90px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    color: rgb(222, 247, 6);
+}
+
+.text-header h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: white;
+    font-style: italic;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.btnBasla{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(248, 248, 245);
+    background-color: rgb(42, 165, 48);
+    padding: 12px;
+    margin-top: 20px;
+    width: 30%;
+    text-align: center;
+    vertical-align: middle;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    cursor: pointer;
+    letter-spacing: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btnBasla::after{
+    background-color: rgb(245, 81, 5);
+    content: "BAŞLA";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    z-index: -1;
+    
+}
+
+.btnBasla:hover{
+    z-index: 1;
+    
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    margin-left: 27px;
+}
+
+a{
+    color: chocolate;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.header-logo h2::before{
+    content:"";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: red;
+    transform: scale(0);
+    transform: translate(0px, 0px);
+    transition: all 0.5s ease;
+}
+
+.header-logo h2::after{
+    content:"";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: black;
+    transform: scale(0);
+    transform: translate(0px, 0px);
+    transition: all 0.5s ease;
+}
+
+.header-logo h2:hover::before{
+    transform: scale(1);
+    transform: translate(0px, 40px);
+}
+
+.header-logo h2:hover::after{
+    transform: scale(1);
+    transform: translate(0px, -40px);
+}
+
+/*About Responsive Giris*/
+@media only screen and (max-width:900px){
+    .about-img{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .about-text{
+        width: 100%;
+    }
+}
+
+/*About Bolumune Giris*/
+
+.about{
+    margin-bottom: 150px;
+}
+
+.about-title{
+    margin: 60px 0px;
+    
+}
+
+.about-title h2{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: chocolate;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.about-title h2::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: chocolate;
+    display: block;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-img{
+    width: 40%;
+}
+
+.about-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    
+}
+
+.about-img:hover img{
+    transform: scale(1.1);
+}    
+
+
+.about-text{
+    width: 60%;
+    text-align: justify;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0 20px;
+    text-indent: 30px;
+}
+
+.about-text h4 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(78, 30, 210);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 5px;
+}
+
+/*Port Folio Responsive Giris*/
+
+@media only screen and(max-width:800px){
+
+    .portfolio .portfolio-item {
+        flex-basis: 50%;
+        
+    }
+}
+
+@media only screen and(max-width:580px){
+    
+    .portfolio .portfolio-item {
+        flex-basis: 100%;
+        
+}
+}
+/*Port Folio Bolumune Giris*/
+
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.portfolio-item{
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+    
+overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(172, 119, 81);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0.8;
+    font-size: 50px;
+    color: rgb(252, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+} 
+
+.portfolio-item:hover.overlay{
+    top: 0;
+} 
+
+.portfolio-item:hover img{
+    transform: scale(1.1);
+}
+
+/* Contact Responsive Giris*/
+
+@media only screen and(max-width:800px){
+
+   .contact-content{
+    
+        flex-direction: row;
+        flex-basis: 100%;
+    }
+    .contact-item{
+        margin-top: 30px;
+    }
+
+    .contact-item p{
+        width: 100px;
+        text-align: center;
+    }
+
+
+}
+
+/* Contact Giris*/
+
+.contact-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+    
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 33%;
+}
+
+.contact-item i img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/*Footer Giris*/
+
+.footer{
+    background-color: rgb(8, 8, 8);
+    padding: 5px 0px;
+}
+
+.alt-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-social i img{
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+}
